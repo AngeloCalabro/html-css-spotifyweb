@@ -110,13 +110,20 @@ img {
 
 
 /* MARGIN - PADDING */
-
 .mt-3rem {
     margin-top: 3rem;
 }
 
 .mt-1_5rem {
     margin-top: 1.5rem;
+}
+
+.mb-1rem {
+    margin-bottom: 1rem;
+}
+
+.ml-1rem {
+    margin-left: 1rem;
 }
 
 .mt-0_75rem {
@@ -131,8 +138,16 @@ img {
     margin-right: 0.5rem;
 }
 
+.ml-0_5rem {
+    margin-left: 0.5rem;
+}
+
 .mt-0_4rem {
     margin-top: 0.4rem;
+}
+
+.pb-0_5rem {
+    padding-bottom: 0.5rem;
 }
 
 
@@ -262,15 +277,42 @@ div.cover-overlay i {
 
 /* nav bar laterale */
 nav.nav_bar {
-    min-height: 200px;
+    height: 100%;
 }
 
+#profile {
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    background-color: var(--black);
+    width: 230px;
+    padding: 1rem;
+}
+
+#logo {
+    height: 100px;
+}
+
+#home {
+    height: 100px;
+}
+
+#playlist {
+    height: 100px;
+}
+
+.min-height {
+    height: calc(100% - 200px);
+    min-height: 250px;
+}
+
+div.personal_playlist-list-hidden-bar {
+    overflow-y: auto;
+}
+
+/* SVG */
 .logo_box svg {
     height: 50px;
-}
-
-.nav_bar section .icon_box:first-child {
-    margin-top: 16px;
 }
 
 .icon_box path,
@@ -280,7 +322,6 @@ nav.nav_bar {
 
 .icon_box svg {
     height: 30px;
-    margin-right: 10px;
 }
 
 .plus {
@@ -293,34 +334,18 @@ nav.nav_bar {
     color: black;
 }
 
-div.personal_playlist-list-hidden-bar {
-    overflow-y: scroll;
-}
-
-#profile {
-    position: fixed;
-    bottom: 80px;
-    left: 0;
-    background-color: var(--black);
-    width: 230px;
-    padding: 1rem;
-}
-
 .download_box svg {
     height: 1rem;
-    margin-right: 10px;
 }
 
 .download_box {
     border-bottom: 1px solid var(--grey);
-    padding-bottom: 0.5rem;
 }
 
 .profile_box svg {
     height: 1.3rem;
     background-color: var(--grey);
     border-radius: 50%;
-    margin-right: 10px;
 }
 
 /* FOOTER */
