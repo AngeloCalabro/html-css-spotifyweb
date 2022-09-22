@@ -108,6 +108,9 @@ img {
     flex-wrap: wrap;
 }
 
+.column {
+    flex-direction: column;
+}
 
 /* MARGIN - PADDING */
 .mt-3rem {
@@ -146,10 +149,29 @@ img {
     margin-top: 0.4rem;
 }
 
+.pt-1rem {
+    padding-top: 1rem;
+}
+
+.pr-1rem {
+    padding-right: 1rem;
+}
+
+.pl-1rem {
+    padding-left: 1rem;
+}
+
 .pb-0_5rem {
     padding-bottom: 0.5rem;
 }
 
+.pl-0_6rem {
+    padding-left: 0.6rem;
+}
+
+.pr-0_6rem {
+    padding-right: 0.6rem;
+}
 
 /* Layout sezioni */
 .wrapper {
@@ -160,23 +182,6 @@ img {
 main {
     width: 100%;
     height: calc(100vh - 80px);
-}
-
-.nav_bar {
-    width: 230px;
-    height: 100%;
-    background-color: var(--black);
-    padding: 1rem 1rem 0 1rem;
-}
-
-.upgrade {
-    width: calc(100% - 230px);
-    height: 80px;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    background-color: var(--black_op);
 }
 
 .main_content {
@@ -190,7 +195,17 @@ main {
     padding-top: 95px;
 }
 
-/* barra opaca in alto */
+/* barra op. in alto */
+.upgrade {
+    width: calc(100% - 230px);
+    height: 80px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: var(--black_op);
+}
+
 .upgrade a {
     color: var(--white);
     border: 1px solid white;
@@ -206,11 +221,7 @@ main {
     scale: 0.95;
 }
 
-/* nav bar del contenuto */
-.nav_content li a {
-    padding: 0 0.6rem;
-}
-
+/* nav bar top upgrade */
 .nav_content li a:hover,
 #home span:hover,
 #playlist a:hover span.sub_title_1,
@@ -268,6 +279,10 @@ div.cover-overlay i {
 
 #famous_artists .card img {
     border-radius: 50%;
+}
+
+#famous_artists .card .cover-overlay {
+    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -276,8 +291,14 @@ div.cover-overlay i {
 }
 
 /* nav bar laterale */
-nav.nav_bar {
+.nav_bar {
+    width: 230px;
     height: 100%;
+    background-color: var(--black);
+}
+
+.nav-top {
+    height: calc((100% - 80px) - 2rem);
 }
 
 #profile {
@@ -289,28 +310,15 @@ nav.nav_bar {
     padding: 1rem;
 }
 
-#logo {
-    height: 100px;
-}
-
-#home {
-    height: 100px;
-}
-
-#playlist {
-    height: 100px;
-}
-
-.min-height {
-    height: calc(100% - 200px);
-    min-height: 250px;
-}
-
 div.personal_playlist-list-hidden-bar {
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 /* SVG */
+.logo-hidden {
+    display: none;
+}
+
 .logo_box svg {
     height: 50px;
 }
@@ -378,5 +386,33 @@ footer {
 @media screen and (max-width:768px) {
     .card {
         width: calc((100% / 2) - 1rem);
+    }
+
+    .upgrade {
+        width: calc(100% - 60px);
+    }
+
+    .nav_bar {
+        width: 60px;
+        align-items: center;
+    }
+
+    .main_content {
+        width: calc(100% - 60px);
+    }
+
+    #profile {
+        width: 60px;
+    }
+
+    .logo-hidden {
+        display: block;
+    }
+
+    .logo_box svg,
+    .sub_title_2-hidden,
+    .title_2-hidden,
+    #playlist {
+        display: none;
     }
 }
