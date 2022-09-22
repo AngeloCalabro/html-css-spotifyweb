@@ -184,6 +184,11 @@ main {
     border-radius: 1.5rem;
     text-transform: uppercase;
     font-size: 0.9rem;
+    transition: 0.5s;
+}
+
+.upgrade a:hover {
+    scale: 0.95;
 }
 
 /* nav bar del contenuto */
@@ -204,8 +209,9 @@ main {
 }
 
 #home a:hover {
-    border-left: 2px solid var(--white);
+    border-left: 2px solid var(--lime);
     margin-left: -1rem;
+    padding-left: 1rem;
 }
 
 .active::after {
