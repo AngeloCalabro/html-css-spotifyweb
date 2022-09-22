@@ -42,25 +42,6 @@ img {
     position: absolute;
 }
 
-/* FLEX */
-
-.d-flex {
-    display: flex;
-}
-
-.j_center {
-    justify-content: center;
-}
-
-.a_it_center {
-    align-items: center;
-}
-
-.wrap {
-    flex-wrap: wrap;
-}
-
-
 /* TEXT */
 
 [class*=title] {
@@ -98,6 +79,26 @@ img {
 .txt_center {
     text-align: center;
 }
+
+
+/* FLEX */
+
+.d-flex {
+    display: flex;
+}
+
+.j_center {
+    justify-content: center;
+}
+
+.a_it_center {
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
 
 /* MARGIN - PADDING */
 
@@ -208,6 +209,13 @@ main {
 div.card:hover .cover-overlay {
     display: block;
     cursor: pointer;
+}
+
+div.cover-overlay i {
+    color: var(--white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #famous_artists .card img {
