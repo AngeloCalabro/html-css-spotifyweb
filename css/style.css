@@ -166,6 +166,10 @@ img {
     padding-top: 1rem;
 }
 
+.pb-1rem {
+    padding-bottom: 1rem;
+}
+
 .pr-1rem {
     padding-right: 1rem;
 }
@@ -308,23 +312,26 @@ div.cover-overlay i {
     width: 230px;
     height: 100%;
     background-color: var(--black);
+    min-height: 400px;
 }
 
 .nav-top {
-    height: calc((100% - 80px) - 2rem);
+    height: calc(100% - 80px);
+    width: 100%;
 }
 
 #profile {
-    position: fixed;
-    bottom: 80px;
-    left: 0;
     background-color: var(--black);
     width: 230px;
-    padding: 1rem;
 }
 
-div.personal_playlist-list-hidden-bar {
-    overflow-y: scroll;
+.personal_playlist {
+    overflow: hidden;
+}
+
+div.personal_playlist-list-overflow-bar {
+    height: 80%;
+    overflow-y: auto;
 }
 
 /* SVG */
@@ -332,16 +339,11 @@ div.personal_playlist-list-hidden-bar {
     display: none;
 }
 
-.logo_box svg {
-    height: 50px;
+.logo_box img {
+    width: 80%;
 }
 
-.icon_box path,
-.download_box path {
-    fill: var(--grey);
-}
-
-.icon_box svg {
+.icon_box img {
     height: 30px;
 }
 
@@ -355,7 +357,7 @@ div.personal_playlist-list-hidden-bar {
     color: var(--black);
 }
 
-.download_box svg {
+.download_box img {
     height: 1rem;
 }
 
@@ -363,7 +365,7 @@ div.personal_playlist-list-hidden-bar {
     border-bottom: 1px solid var(--grey);
 }
 
-.profile_box svg {
+.profile_box img {
     height: 1.3rem;
     background-color: var(--grey);
     border-radius: 50%;
@@ -519,7 +521,7 @@ footer.control-bar a:hover {
         justify-content: center;
     }
 
-    .logo_box svg,
+    .logo_box,
     .sub_title_2-hidden,
     .title_2-hidden,
     #playlist,
@@ -530,6 +532,12 @@ footer.control-bar a:hover {
     .fa-random,
     .fa-redo-alt {
         display: none;
+    }
+
+    #profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 }
